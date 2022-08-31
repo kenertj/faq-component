@@ -1,9 +1,17 @@
-import React from 'react'
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import React from 'react';
+import { Box, Typography } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import ArrowIcon from '../assets/icon-arrow-down.svg'
+import CollapseAccordion from './CollapseAccordion';
+import { ReactComponent as DekstopImage } from '../assets/illustration-woman-online-desktop.svg';
+import { ReactComponent as DekstopPattern } from '../assets/bg-pattern-desktop.svg';
+import { ReactComponent as MobilePicture } from '../assets/illustration-woman-online-mobile.svg';
+import { ReactComponent as MobilePattern } from '../assets/bg-pattern-mobile.svg';
+
+
+
 
 const FaqComponent = () => {
+
     return (
         <Box
             display="flex"
@@ -13,33 +21,42 @@ const FaqComponent = () => {
         >
             <Grid container
                 sx={{
-                    width: 700,
-                    height: 400,
+                    width: '700px',
                     p: 2,
                     backgroundColor: '#fff',
                     borderRadius: '10px',
+                    overflow: 'visible'
                 }}
             >
-                <Grid xs={6}>
-                    <Typography>FAQ</Typography>
+                <Grid xs={12} md={6}  >
+                    <Box sx={{
+                        position: "relative",
+                        display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' }
+                    }}>
+
+                        <DekstopPattern width={250} height={250} style={{ "position": "absolute" }} />
+                        <DekstopImage width={320} height={359} style={{ "position": "relative" }} />
+                    </Box>
+                    <Box sx={{
+                        position: "relative",
+                        display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' },
+                        overflow: "visible",
+                        mb: "150px"
+
+                    }}>
+
+
+                        <MobilePicture width={320} height={150} style={{ "position": "absolute", }} />
+                        <MobilePattern width={220} height={104} style={{ "position": "relative", }} />
+                    </Box>
+
+
                 </Grid>
-                <Grid xs={6}>
+                <Grid xs={12} md={6}>
                     <Typography fontSize="25px" fontWeight="900" color="#1d1e35" mt="30px">FAQ</Typography>
-                    <Accordion>
-                        <AccordionSummary
-                            expandIcon={<ArrowIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                        >
-                            <Typography>Accordion 1</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                                malesuada lacus ex, sit amet blandit leo lobortis eget.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
+
+                    <CollapseAccordion />
+
                 </Grid>
 
             </Grid>
