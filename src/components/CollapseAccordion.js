@@ -23,6 +23,7 @@ export const CollapseAccordion = () => {
 
 
 
+
                 }}
 
             >
@@ -59,7 +60,8 @@ export const CollapseAccordion = () => {
                     },
                     mb: '0px',
                     boxShadow: 'none',
-                    borderBottom: '1px solid #e7e7e9'
+                    borderBottom: '1px solid #e7e7e9',
+
 
                 }}
 
@@ -92,7 +94,8 @@ export const CollapseAccordion = () => {
                     },
                     mb: '5px',
                     boxShadow: 'none',
-                    borderBottom: '1px solid #e7e7e9'
+                    borderBottom: '1px solid #e7e7e9',
+
 
                 }}
 
@@ -125,7 +128,8 @@ export const CollapseAccordion = () => {
                     },
                     mb: '5px',
                     boxShadow: 'none',
-                    borderBottom: '1px solid #e7e7e9'
+                    borderBottom: '1px solid #e7e7e9',
+
 
                 }}
 
@@ -158,7 +162,8 @@ export const CollapseAccordion = () => {
                     },
                     mb: '5px',
                     boxShadow: 'none',
-                    borderBottom: '1px solid #e7e7e9'
+                    borderBottom: '1px solid #e7e7e9',
+
 
                 }}
 

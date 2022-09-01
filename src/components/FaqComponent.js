@@ -6,6 +6,7 @@ import { ReactComponent as DekstopImage } from '../assets/illustration-woman-onl
 import { ReactComponent as DekstopPattern } from '../assets/bg-pattern-desktop.svg';
 import { ReactComponent as MobilePicture } from '../assets/illustration-woman-online-mobile.svg';
 import { ReactComponent as MobilePattern } from '../assets/bg-pattern-mobile.svg';
+import { ReactComponent as IllustrationBox } from '../assets/illustration-box-desktop.svg';
 
 
 
@@ -21,41 +22,97 @@ const FaqComponent = () => {
         >
             <Grid container
                 sx={{
-                    width: '700px',
+
                     p: 2,
                     backgroundColor: '#fff',
                     borderRadius: '10px',
-                    overflow: 'visible'
+                    overflow: 'hidden'
+
+
+
                 }}
             >
                 <Grid xs={12} md={6}  >
                     <Box sx={{
-                        position: "relative",
-                        display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' }
-                    }}>
 
-                        <DekstopPattern width={250} height={250} style={{ "position": "absolute" }} />
-                        <DekstopImage width={320} height={359} style={{ "position": "relative" }} />
+                        display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' },
+                        width: '150px',
+                        justifyContent: "center"
+
+
+                    }}>
+                        <Box
+                            sx={{
+                                position: "absolute"
+                            }}
+                        >
+                            <IllustrationBox width={120} height={120} style={{ "position": "absolute", "zIndex": "3", "top": "110px", "right": "30px" }} />
+                        </Box>
+                        <Box
+                            sx={{
+                                position: "relative"
+                            }}
+                        >
+                            <DekstopPattern width={550} height={550} style={{ "zIndex": "1", "position": "absolute", "right": "-170px", "top": "-160px" }} />
+                            <DekstopImage width={320} height={359} style={{ "zIndex": "2", "position": "absolute", "right": "-170px", "top": "-40px" }} />
+                        </Box>
                     </Box>
                     <Box sx={{
-                        position: "relative",
-                        display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' },
+
+                        display: { xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' },
                         overflow: "visible",
-                        mb: "150px"
+                        mb: "-20px",
+                        justifyContent: "center"
+
+
 
                     }}>
 
-
-                        <MobilePicture width={320} height={150} style={{ "position": "absolute", }} />
-                        <MobilePattern width={220} height={104} style={{ "position": "relative", }} />
+                        <Box
+                            sx={{
+                                position: "absolute",
+                                maxWidth: "300px",
+                                justifyContent: "center"
+                            }}
+                        >
+                            <MobilePicture width={220} height={180} style={{ "position": "absolute", "top": "-120px" }} />
+                            <MobilePattern width={220} height={104} style={{ "position": "relative", "top": "-20px" }} />
+                        </Box>
                     </Box>
 
 
                 </Grid>
                 <Grid xs={12} md={6}>
-                    <Typography fontSize="25px" fontWeight="900" color="#1d1e35" mt="30px">FAQ</Typography>
-
-                    <CollapseAccordion />
+                    <Box
+                        sx={{
+                            display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' },
+                        }}
+                    >
+                        <Typography fontSize="30px" fontWeight="1000" color="#1d1e35" mt="120px" mb="20px" textAlign="center">FAQ</Typography>
+                        <Box
+                            sx={{
+                                maxWidth: "300px",
+                                margin: "0 auto"
+                            }}
+                        >
+                            <CollapseAccordion />
+                        </Box>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' },
+                        }}
+                    >
+                        <Typography fontSize="25px" fontWeight="900" color="#1d1e35" mt="30px">FAQ</Typography>
+                        <Box
+                            sx={{
+                                maxWidth: "550px",
+                                margin: "0 auto"
+                            }}
+                        >
+                            <CollapseAccordion />
+                        </Box>
+                    </Box>
 
                 </Grid>
 
