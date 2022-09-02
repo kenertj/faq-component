@@ -1,4 +1,4 @@
-import './App.css';
+
 import FaqComponent from './components/FaqComponent';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 const theme = createTheme({

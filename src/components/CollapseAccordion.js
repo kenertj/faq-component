@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
@@ -11,21 +11,13 @@ export const CollapseAccordion = () => {
     return (
         <div>
             <Accordion
+
                 expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
                 sx={{
-
-                    '&$expanded': {
-                        fontSize: "25px"
-                    },
                     mb: '5px',
                     boxShadow: 'none',
                     borderBottom: '1px solid #e7e7e9',
-
-
-
-
                 }}
-
             >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{ color: '#f47c57' }} />}
@@ -35,11 +27,7 @@ export const CollapseAccordion = () => {
                         ':hover': {
                             color: "#f47c57"
                         },
-                        ':expanded': {
-                            fontSize: "25px"
-                        },
                     }}
-
                 >
                     <Typography fontSize="12px"
                     >How many team members can I invite?</Typography>
@@ -61,10 +49,7 @@ export const CollapseAccordion = () => {
                     mb: '0px',
                     boxShadow: 'none',
                     borderBottom: '1px solid #e7e7e9',
-
-
                 }}
-
             >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{ color: '#f47c57' }} />}
@@ -95,8 +80,6 @@ export const CollapseAccordion = () => {
                     mb: '5px',
                     boxShadow: 'none',
                     borderBottom: '1px solid #e7e7e9',
-
-
                 }}
 
             >
@@ -129,10 +112,7 @@ export const CollapseAccordion = () => {
                     mb: '5px',
                     boxShadow: 'none',
                     borderBottom: '1px solid #e7e7e9',
-
-
                 }}
-
             >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{ color: '#f47c57' }} />}
@@ -163,10 +143,7 @@ export const CollapseAccordion = () => {
                     mb: '5px',
                     boxShadow: 'none',
                     borderBottom: '1px solid #e7e7e9',
-
-
                 }}
-
             >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon style={{ color: '#f47c57' }} />}

@@ -28,8 +28,6 @@ const FaqComponent = () => {
                     borderRadius: '10px',
                     overflow: 'hidden'
 
-
-
                 }}
             >
                 <Grid xs={12} md={6}  >
@@ -42,8 +40,13 @@ const FaqComponent = () => {
 
                     }}>
                         <Box
+                            className="illubox"
                             sx={{
-                                position: "absolute"
+                                position: "absolute",
+                                ':hover': {
+
+                                    mr: "20px"
+                                }
                             }}
                         >
                             <IllustrationBox width={120} height={120} style={{ "position": "absolute", "zIndex": "3", "top": "110px", "right": "30px" }} />
@@ -63,9 +66,6 @@ const FaqComponent = () => {
                         overflow: "visible",
                         mb: "-20px",
                         justifyContent: "center"
-
-
-
                     }}>
 
                         <Box
@@ -92,7 +92,8 @@ const FaqComponent = () => {
                         <Box
                             sx={{
                                 maxWidth: "300px",
-                                margin: "0 auto"
+                                margin: "0 auto",
+
                             }}
                         >
                             <CollapseAccordion />
@@ -103,11 +104,17 @@ const FaqComponent = () => {
                             display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' },
                         }}
                     >
-                        <Typography fontSize="25px" fontWeight="900" color="#1d1e35" mt="30px">FAQ</Typography>
+                        <Typography fontSize="27px" fontWeight="1000" color="#1d1e35" mt="20px" ml="15px">FAQ</Typography>
                         <Box
                             sx={{
                                 maxWidth: "550px",
-                                margin: "0 auto"
+                                margin: "0 auto",
+                                ":hover": {
+
+                                    ".illubox": {
+                                        mr: "20px"
+                                    }
+                                }
                             }}
                         >
                             <CollapseAccordion />
